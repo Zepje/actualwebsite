@@ -1,0 +1,144 @@
+body {
+    font-family: 'chalet';
+    font-size: 20px;
+    background-image: url('./blacktron_1920x1080.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color:#ffffff;
+}
+
+#intro {
+    padding-top: 15vh;
+    padding-bottom: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#introtext{
+    max-width: 50vw;
+}
+
+#projects li {
+    height: 50vh;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    /* Ensure overflow is hidden to contain the overlay */
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.item-overlay p {
+    margin-top: 5px;
+}
+
+#projects li:hover {
+    transform: scale(1.1);
+}
+
+#projects li:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay h2,
+.item-overlay p {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+#projects li:hover h2,
+#projects li:hover p {
+    opacity: 1;
+}
+
+#projects ol {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contact li {
+    height: 25vh;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    /* Ensure overflow is hidden to contain the overlay */
+    transition: transform 0.3s ease-in-out;
+}
+
+#contact img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+#contact li:hover {
+    transform: scale(1.1);
+}
+
+#contact li:hover .item-overlay {
+    opacity: 1;
+}
+
+
+
+#contact li:hover h2,
+#contact li:hover p {
+    opacity: 1;
+}
+
+#contact ol {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.titlecard {
+    display: grid;
+    place-items: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+@font-face {
+    font-family: 'chalet';
+    src: url('./Chalet\ New\ York\ Nineteen\ Eighty.otf');
+}
